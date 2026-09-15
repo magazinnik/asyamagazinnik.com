@@ -1,0 +1,75 @@
+Keywords: 
+Conjoint methodology 
+Education policy 
+Federalism 
+Housing & land use
+Immigration 
+Measurement of political preferences
+Political geography & spatial inequality 
+Sheriffs 
+Voting rights & local elections
+
+Peer-Reviewed Publications 
+
+1. Aggregation, Interpretation, and Estimation of Preferences in Conjoint Experiments
+Link: 
+Keywords: Measurement of political preferences, Conjoint methodology 
+
+2. Reform Drift: How Incumbent Protection Undermines Descriptive Representation in Local Government
+Link: 
+Keywords: Voting rights & local elections, Political geography & spatial inequality 
+
+3. An Agency Perspective on Immigration Federalism
+Link: https://www.journals.uchicago.edu/doi/10.1086/736024
+Keywords: Immigration, Federalism, Sheriffs 
+
+4. The Policy Adjacent: How Affordable Housing Generates Policy Feedback Among Neighboring Residents
+Link: https://doi.org/10.1111/ajps.70022
+Keywords: Housing & land use, Political geography & spatial inequality 
+
+5. When Do Local Interest Groups Participate in the Housing Entitlement Process?
+Link: https://doi.org/10.1561/113.00000093
+Keywords: Housing & land use
+
+6. Inaccuracies in Low Income Housing Geocodes: When and Why They Matter
+Link: https://doi.org/10.1177/10780874231165767
+Keywords: Housing & land use, Political geography & spatial inequality
+
+7. The Supply–Equity Trade-Off: The Effect of Spatial Representation on the Local Housing Supply
+Link: https://doi.org/10.1086/723818
+Keywords: Voting rights & local elections, Housing & land use, Political geography & spatial inequality
+
+8. Income Inequality and Electoral Theories of Polarization
+Link: https://doi.org/10.1561/113.00000062
+Keywords: Political geography & spatial inequality
+
+9. What Do We Learn About Voter Preferences from Conjoint Experiments?
+Link: https://doi.org/10.1111/ajps.12714
+Keywords: Measurement of political preferences, Conjoint methodology 
+
+10. At-Large Elections and Minority Representation in Local Government
+Link: https://doi.org/10.1111/ajps.12512
+Keywords: Political geography & spatial inequality, Voting rights & local elections, Education policy 
+
+11. Financial Incentives in Vertical Diffusion: The Variable Effects of Obama’s Race to the Top Initiative on State Policy Making
+Link: https://doi.org/10.1177/1532440019888229
+Keywords: Federalism, Education policy 
+
+12. Presidential Prescriptions for State Policy: Obama’s Race to the Top Initiative
+Link: https://doi.org/10.1002/pam.21986
+Keywords: Federalism, Education policy 
+
+Working Papers 
+
+1. The Shape of Democracy: Jurisdiction Boundaries and the Siting of Renewable Energy Infrastructure
+Keywords: Political geography & spatial inequality, Housing & land use
+
+2. How Responsive Is Local Immigration Enforcement to Constituency Preferences?
+Keywords: Immigration, Sheriffs, Measurement of political preferences, Voting rights & local elections
+
+3. Assessing District Elections as a Remedy in State Voting Rights Acts
+Keywords: Voting rights & local elections, Political geography & spatial inequality
+
+4. Causal Attribution in Conjoint Experiments
+Keywords: Measurement of political preferences, Conjoint methodology 
+

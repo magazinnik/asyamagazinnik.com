@@ -1,0 +1,112 @@
+---
+title: "Asya Magazinnik"
+---
+
+```{=html}
+<!-- ==========================================================================
+     ABOUT HERO
+     The name is a heading here rather than in the top bar; the bar's copy of
+     it is hidden on this page by CSS (see "ABOUT PAGE" in styles.scss).
+     ========================================================================== -->
+<header class="about-hero">
+  <h1 class="about-name"><strong>Asya</strong> Magazinnik</h1>
+  <p class="about-role">Professor of Social Data Science, Hertie School</p>
+</header>
+
+<!-- Photo and bio are two columns of one row, not a float, so every line of
+     the bio starts at the same left edge instead of reflowing underneath the
+     photo when it runs out. The bio is plain HTML rather than markdown so
+     the whole row stays in one block. -->
+<div class="about-row">
+
+  <img class="about-photo" src="photo/asya-magazinnik.jpg"
+       alt="Asya Magazinnik" width="800" height="800">
+
+  <div class="about-bio">
+    <p>Welcome! I am the Professor of Social Data Science at the
+    <a href="https://www.hertie-school.org/">Hertie School</a> in Berlin, where
+    I am affiliated with the
+    <a href="https://www.hertie-school.org/en/datasciencelab">Data Science
+    Lab</a> and teach in the Master of Data Science for Public Policy and the
+    Master of Public Policy.</p>
+
+    <p>I work at the intersection of causal inference, quantitative methods,
+    and game theory to advance the understanding of political representation
+    and public goods provision in democratic societies. My work has recently
+    appeared in the <em>American Journal of Political Science</em>, the
+    <em>Journal of Politics</em>, <em>Political Science Research and
+    Methods</em>, and other outlets. My research has received awards from
+    APSA&rsquo;s &ldquo;American Political Economy&rdquo; and
+    &ldquo;Representation and Electoral Systems&rdquo; sections, and has been
+    funded by Arnold Ventures, CIVICA, the Russell Sage Foundation, and the
+    National Science Foundation.</p>
+
+    <p>Before joining the Hertie School, I was an Assistant Professor of
+    Political Science at MIT. I hold a Ph.D. in Politics from Princeton
+    University and an M.P.P. from the University of Chicago Harris School.</p>
+  </div>
+
+</div>
+```
+
+## Updates
+
+```{=html}
+<!-- ==========================================================================
+     UPDATES TICKER
+     Newest at the top. To add an entry, copy one <li> and edit it. The date
+     goes in its own <span> so the dates line up in a column.
+     ========================================================================== -->
+<ul class="news">
+
+  <li>
+    <span class="date">September 2026</span>
+    <span>New working paper with Michael Hankinson and Joseph Loffredo:
+    &ldquo;<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7154498">Assessing
+    District Elections as a Remedy in State Voting Rights Acts</a>&rdquo;</span>
+  </li>
+
+  <li>
+    <span class="date">August 2026</span>
+    <span>&ldquo;<a href="https://osf.io/preprints/socarxiv/xjre9_v1">Aggregation,
+    Interpretation, and Estimation of Preferences in Conjoint
+    Experiments</a>&rdquo; (with Scott F Abramson, Korhan Kocak, and Anton
+    Strezhnev) is conditionally accepted at <em>PSRM</em>.</span>
+  </li>
+
+  <li>
+    <span class="date">July 2026</span>
+    <span>I gave the keynote at the <a href="https://summerschoolwpm.org/summer-school-2026/">Summer
+    School for Women in Political Methodology</a> at the University of
+    Mannheim.</span>
+  </li>
+
+  <li>
+    <span class="date">July 2026</span>
+    <span>&ldquo;<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5372605">Reform
+    Drift: How Incumbent Protection Undermines Descriptive Representation in
+    Local Government</a>&rdquo; (with Joseph Loffredo and Michael Hankinson) is
+    conditionally accepted at <em>AJPS</em>.</span>
+  </li>
+
+  <li>
+    <span class="date">May 2026</span>
+    <span>I hosted the 2026 <a href="https://vim2026.com/">Visions in
+    Methodology</a> Conference at the Hertie School.</span>
+  </li>
+
+  <li>
+    <span class="date">May 2026</span>
+    <span>I gave a <a href="talks/polmeth-europe-2026.pdf">keynote</a> on the
+    measurement of political preferences at PolMeth Europe in Dublin.</span>
+  </li>
+
+  <li>
+    <span class="date">April 2026</span>
+    <span>&ldquo;<a href="https://doi.org/10.1086/736024">An Agency Perspective
+    on Immigration Federalism</a>&rdquo; is forthcoming at the
+    <em>JOP</em>.</span>
+  </li>
+
+</ul>
+```

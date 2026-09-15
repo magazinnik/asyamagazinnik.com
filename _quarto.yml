@@ -1,0 +1,53 @@
+project:
+  type: website
+  output-dir: _site
+  # Copy these folders into _site as-is. Without this, the PDFs and figures
+  # are not published and every link to them 404s.
+  resources:
+    # Tells GitHub Pages which custom domain serves this site. It must be
+    # republished with every deploy, or Pages forgets the domain.
+    - CNAME
+    - papers/
+    - syllabi/
+    - talks/
+    - cv/
+    - photo/
+    - fonts/
+    - figures/
+
+website:
+  title: "Asya Magazinnik"        # used for <title> and metadata, not displayed
+  description: "Professor of Social Data Science, Hertie School, Berlin"
+  # Quarto's search box is JavaScript (Fuse.js + autocomplete). Off.
+  search: false
+  # Browser-tab icon: "AM" in Roboto Slab on the site's crimson. Without this,
+  # browsers show their generic globe placeholder.
+  favicon: favicon.png
+  navbar:
+    # The name sits top-left. On the About page it is hidden by CSS, because
+    # that page carries the name as its own big heading instead.
+    title: "**Asya** Magazinnik"
+    right:
+      - href: index.qmd
+        text: About
+      - href: research.qmd
+        text: Research
+      - href: teaching.qmd
+        text: Teaching
+      - href: cv.qmd
+        text: CV
+
+format:
+  html:
+    theme: [default, styles.scss]
+    toc: false
+    # No JavaScript anywhere on this site. The topic filter on the research
+    # page and the show/hide abstracts are pure CSS + native HTML.
+    anchor-sections: false
+    link-external-newwindow: true
+    # Higher-resolution icon for the iOS/Android home screen and for browsers
+    # that prefer a larger source than the 32px favicon.
+    include-in-header:
+      text: |
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png">

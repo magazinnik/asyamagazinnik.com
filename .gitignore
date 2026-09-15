@@ -1,0 +1,17 @@
+# Quarto build output and caches
+_site/
+.quarto/
+/.quarto/
+**/*.quarto_ipynb
+*_files/
+
+# Untouched source material, kept locally only.
+# IMPORTANT: the original headshot in here still carries its EXIF GPS
+# coordinates. It must never be committed to a public repository — the copy
+# published in photo/ is the stripped one.
+_originals/
+
+# Local tooling / OS cruft
+.claude/
+.DS_Store
+Icon?

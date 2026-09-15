@@ -1,0 +1,101 @@
+---
+title: "Teaching"
+---
+
+## Hertie School
+
+```{=html}
+<div class="course">
+  <span class="course-title">Algorithmic Game Theory and Governance</span>
+  <span class="course-meta">Master&rsquo;s &middot; last taught Fall 2025 &middot;
+    <a href="syllabi/syllabus-algorithmic-game-theory-f2025.pdf">Syllabus</a></span>
+  <details class="course-desc">
+    <summary>Description</summary>
+    <div class="course-desc-body"><p>This course is about how the emergent field of algorithmic game theory is transforming society and governance. Advances at the nexus of computer science and game theory have been applied to learning in AI systems; to the design and governance of online platforms and cryptocurrencies; to improving the efficiency of energy markets and transportation networks; to the fair allocation of shared resources; and to matching organ donors to receivers. The course begins by teaching students the basic tools of game theory, including Nash equilibrium, backward induction, expected utility, static and dynamic games of complete and incomplete information, repeated games, mechanism design, and social choice theory. With every topic, students are introduced to algorithmic approaches as well as cutting-edge applications to society and governance.</p></div>
+  </details>
+</div>
+
+<div class="course">
+  <span class="course-title">Mathematics for Data Science</span>
+  <span class="course-meta">Master&rsquo;s &middot; last taught Fall 2025 &middot;
+    <a href="syllabi/syllabus-math-for-data-science-f2025.pdf">Syllabus</a> &middot;
+    <a href="https://github.com/magazinnik/math-for-data-science">Slides</a></span>
+  <details class="course-desc">
+    <summary>Description</summary>
+    <div class="course-desc-body"><p>This course aims to deliver a compact and tailored introduction to the core mathematical concepts of data science: probability theory, calculus, linear algebra, and statistics. We will establish and reinforce the foundation that will support your further studies in machine learning, deep learning, and causal inference, and which will inform how you conceptualize and analyze data. By the end of the course, students will (re)acquaint themselves with the basic principles of probability theory that structure the process that generates data; with the behavior of functions that describe relationships in data; with the rules of linear algebra that govern how to manipulate data; and, finally, with the tools of statistical learning that we use to extract information from our datasets.</p></div>
+  </details>
+</div>
+
+<div class="course">
+  <span class="course-title">Statistics II: Statistical Modeling and Causal Inference with R</span>
+  <span class="course-meta">Master&rsquo;s &middot; last taught Fall 2025 &middot;
+    <a href="syllabi/syllabus-stats-ii-f2025.pdf">Syllabus</a> &middot;
+    <a href="https://github.com/magazinnik/stats-ii">Slides</a></span>
+  <details class="course-desc">
+    <summary>Description</summary>
+    <div class="course-desc-body"><p>This course continues the sequence in statistical modeling. Assuming prior knowledge in simple and multiple linear regression modeling, it introduces you to a new perspective on studying causes and effects in social science. The course agenda covers various strategies to uncover causal relationships using statistical tools. We start with reflecting about causality and the ideal research design, and then we learn to use a framework to study causal effects. Then, we revisit common regression estimators of causal effects and learn about their limitations. Next, we focus on matching, instrumental variables, difference-in-differences and fixed effects estimators, regression discontinuity designs, and techniques to explore moderated relationships. All classes divide time between theory and application.</p></div>
+  </details>
+</div>
+```
+
+## MIT
+
+```{=html}
+<div class="course">
+  <span class="course-title">Introduction to the American Political Process (17.20)</span>
+  <span class="course-meta">Undergraduate &middot; last taught Spring 2022 &middot;
+    <a href="syllabi/syllabus-intro-american.pdf">Syllabus</a> &middot;
+    <a href="https://github.com/magazinnik/intro-american">Slides</a> &middot;
+    <a href="https://ocw.mit.edu/courses/political-science/17-20-introduction-to-the-american-political-process-fall-2020/">OpenCourseWare</a></span>
+  <details class="course-desc">
+    <summary>Description</summary>
+    <div class="course-desc-body"><p>This course provides an introduction to the academic study of American politics and to the discipline of political science more generally. We will cover a wide range of topics, including the foundational principles of elections, representation, and collective action; American institutional structures such as Congress and the presidency; the activities of strategic political elites; the political behavior of ordinary citizens; and a range of substantive issues relevant to the American context, including race, money in politics, polarization, immigration, and the carceral state. Along the way, we will learn the theoretical and empirical frameworks political scientists use to analyze these topics, with particular emphasis on the advantages and limitations of understanding political actors as rational and strategic decision-makers.</p></div>
+  </details>
+</div>
+
+<div class="course">
+  <span class="course-title">Game Theory (17.810 / 17.811)</span>
+  <span class="course-meta">Undergraduate / PhD &middot; last taught Spring 2021 &middot;
+    <a href="syllabi/syllabus-game-theory.pdf">Syllabus</a> &middot;
+    <a href="https://github.com/magazinnik/game-theory">Slides</a> &middot;
+    <a href="https://ocw.mit.edu/courses/17-810-game-theory-spring-2021/">OpenCourseWare</a></span>
+  <details class="course-desc">
+    <summary>Description</summary>
+    <div class="course-desc-body"><p>This course provides an introduction to game theoretic analysis in political science. We study the concepts and models used to analyze political behavior in strategic contexts, including normal and extensive form games, games of incomplete information, repeated games, and bargaining.</p></div>
+  </details>
+</div>
+
+<div class="course">
+  <span class="course-title">American Political Institutions (17.202)</span>
+  <span class="course-meta">PhD &middot; last taught Spring 2021 &middot;
+    <a href="syllabi/syllabus-american-institutions.pdf">Syllabus</a></span>
+  <details class="course-desc">
+    <summary>Description</summary>
+    <div class="course-desc-body"><p>This is the first in a two-course graduate sequence on American political institutions. Whereas the second course focuses on cutting-edge formal and quantitative studies of American institutions, this one emphasizes classic theoretical and descriptive works. The readings draw on a variety of theoretical frameworks, especially historical and rational-choice institutionalism, and a mix of quantitative and qualitative methodologies.</p></div>
+  </details>
+</div>
+
+<div class="course">
+  <span class="course-title">Formal Approaches to Political Institutions (17.S953)</span>
+  <span class="course-meta">PhD &middot; last taught Fall 2021 &middot;
+    <a href="syllabi/syllabus-formal-approaches.pdf">Syllabus</a></span>
+  <details class="course-desc">
+    <summary>Description</summary>
+    <div class="course-desc-body"><p>This course is an overview of concepts and methods in formal theory used to analyze domestic politics. It is organized thematically, according to strategic interactions and social problems that institutions may both solve and exacerbate, such as delegation, collective action, commitment, and preference aggregation. For each of these themes, we will learn some basic game theoretic modeling techniques; closely read a few formative papers; and apply our tools to the analysis of a wide range of specific problems in American politics, including questions about elections, political participation, polarization, representation, the internal organization of Congress and the bureaucracy, separation of powers, campaign finance, redistribution, public goods provision, and the legislative process. While this course on its own cannot provide all the tools students need to produce their own models, they should emerge from the semester empowered consumers of applied formal theory, with a good sense of the techniques that are available to advance their research interests.</p></div>
+  </details>
+</div>
+```
+
+## Workshops
+
+```{=html}
+<div class="course">
+  <span class="course-title"><a href="https://www.sv.uio.no/isv/english/research/news-and-events/events/others/2024/eitm-oslo-summer-institute-2024.html">EITM-Oslo Summer Institute</a>, Theoretical Implications of Empirical Models</span>
+  <span class="course-meta">PhD &middot; Summer 2024 &middot;
+    <a href="syllabi/syllabus-eitm-oslo-2024.pdf">Syllabus</a></span>
+  <details class="course-desc">
+    <summary>Description</summary>
+    <div class="course-desc-body"><p>In this module, we will turn the main focus of this program on its head. Just as formal models have testable empirical implications, many of the research designs commonly used in political science are premised on strategic interactions, the structure and outcomes of which are relevant for the interpretation and validity of empirical results. A nascent scholarly literature has recently begun to unpack these <em>theoretical implications of empirical models</em> (TIEM). We will learn a general framework for connecting empirical research designs to their theoretical underpinnings. Then, we will think through the connections between the TIEM approach and causal inference. Finally, we will work through several applications to research designs such as randomized control trials, instrumental variables, regression discontinuity designs, and conjoint experiments, and to research topics central to the study of representative democracy, including how governments respond to citizen protest, the role of the media, and voter rationality.</p></div>
+  </details>
+</div>
+```

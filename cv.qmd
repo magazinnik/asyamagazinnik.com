@@ -1,0 +1,18 @@
+---
+title: "CV"
+---
+
+```{=html}
+<!-- ==========================================================================
+     CV PAGE
+     The PDF is handed to the browser's own viewer, so there is no JavaScript
+     and no third-party embed. That viewer supplies its own download, print
+     and zoom controls in its toolbar. Anything inside the element is the
+     fallback, shown only when a browser cannot render a PDF inline (some
+     mobile browsers), which is why the fallback keeps a plain link.
+     ========================================================================== -->
+<object class="cv-frame" data="cv/Magazinnik_CV.pdf" type="application/pdf">
+  <p class="cv-fallback">Your browser cannot show PDFs inline.
+  <a href="cv/Magazinnik_CV.pdf">Download the CV</a> instead.</p>
+</object>
+```

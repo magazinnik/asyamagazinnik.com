@@ -1,0 +1,746 @@
+/*-- scss:defaults --*/
+
+// ===========================================================================
+// TYPOGRAPHY AND COLOR
+// ---------------------------------------------------------------------------
+// Everything you are likely to want to tweak lives in this block. Change a
+// value here and it propagates through the whole site.
+// ===========================================================================
+
+// Font stack. Riaz's site uses Lato loaded from Google Fonts; that hotlink
+// sends visitor IPs to Google, which is a GDPR problem in Germany. This stack
+// uses fonts already on the visitor's machine, so there is no external
+// request at all. To switch to self-hosted Lato later, drop the .woff2 files
+// in fonts/ and add an @font-face block in the rules section below.
+$font-family-sans-serif: "Roboto", -apple-system, BlinkMacSystemFont,
+                         "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+
+// Slab serif, used for the name and section headings.
+$font-family-display: "Roboto Slab", Georgia, "Times New Roman", serif !default;
+
+// Body text. 17px is noticeably larger than Riaz's 14px, because his text
+// sits in a narrow 500px column and ours runs the full measure below.
+$font-size-root:  17px !default;
+$line-height-base: 1.6 !default;
+
+// Colors, lifted from Riaz's stylesheet.
+$body-color:      #2d2d2d !default;  // body text
+$headings-color:  #222222 !default;  // headings
+$link-color:      #b22222 !default;  // crimson
+$link-hover-color:#c9302c !default;  // slightly brighter crimson
+$body-bg:         #ffffff !default;
+
+// The measure: how wide the text column is allowed to get. Roughly 70-75
+// characters per line, which is the readable range. Raise it for a wider
+// column, lower it for a narrower one.
+$measure: 42rem !default;
+
+
+/*-- scss:rules --*/
+
+// ===========================================================================
+// SELF-HOSTED FONTS
+// ---------------------------------------------------------------------------
+// Roboto and Roboto Slab, served from this site's own fonts/ folder. They are
+// NOT hotlinked from Google: a Google Fonts <link> would send every visitor's
+// IP address to Google on page load, which is the GDPR problem noted in
+// CLAUDE.md. These files were downloaded once and now ship with the site, so
+// no visitor request ever leaves your domain.
+//
+// Each file is a VARIABLE font, so a single file covers weights 100-900 --
+// hence `font-weight: 100 900` rather than one file per weight. Two subsets
+// per face: `latin` for ordinary text, `latin-ext` for accented characters
+// (Vinaes, Kocak and similar). The browser downloads latin-ext only if the
+// page actually uses a character from that range.
+// ===========================================================================
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100 900;          // one variable file covers every weight
+  font-display: swap;            // text shows immediately in the fallback
+  src: url('fonts/roboto-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100 900;          // one variable file covers every weight
+  font-display: swap;            // text shows immediately in the fallback
+  src: url('fonts/roboto-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 100 900;          // one variable file covers every weight
+  font-display: swap;            // text shows immediately in the fallback
+  src: url('fonts/roboto-italic-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-weight: 100 900;          // one variable file covers every weight
+  font-display: swap;            // text shows immediately in the fallback
+  src: url('fonts/roboto-italic-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 100 900;          // one variable file covers every weight
+  font-display: swap;            // text shows immediately in the fallback
+  src: url('fonts/roboto-slab-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 100 900;          // one variable file covers every weight
+  font-display: swap;            // text shows immediately in the fallback
+  src: url('fonts/roboto-slab-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+
+// ===========================================================================
+// LAYOUT: one centered column
+// ---------------------------------------------------------------------------
+// The entire site is a single column capped at $measure and centered. There
+// is no sidebar. Quarto ships Bootstrap underneath; these rules override the
+// parts of it that would otherwise widen or decorate the page.
+// ===========================================================================
+
+// Roboto Slab throughout, headings and body copy alike. The nav and the form
+// controls below stay in the sans face, which keeps them reading as chrome
+// rather than as part of the text.
+body {
+  font-family: $font-family-display;
+  font-weight: 400;
+}
+
+// Quarto wraps page content in these; flatten them to our single column.
+#quarto-content,
+main.content,
+.page-columns {
+  display: block !important;
+  max-width: $measure;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+// ---------------------------------------------------------------------------
+// Navigation: a sticky top bar. Name on the left, links on the right.
+//
+// Three things fight Bootstrap here, which Quarto ships underneath:
+//
+//   1. Bootstrap's navbar is a flex row we re-purpose: the link group gets
+//      `margin-left: auto` so it pins right whether or not the name is
+//      present. (On the About page the name is hidden, and the links must
+//      still sit in exactly the same spot.)
+//   2. Below 992px Bootstrap hides the links behind a hamburger and expects
+//      its own JavaScript to open it. This site has no JavaScript, so we
+//      force the panel open at every width and drop the button; the links
+//      wrap onto a second line when space runs out.
+//   3. `position: sticky` keeps the bar in the document flow, so it reserves
+//      its own space and never overlaps the content beneath it -- unlike
+//      `fixed`, which would need a matching top padding on the body.
+// ---------------------------------------------------------------------------
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.94) !important;
+  backdrop-filter: blur(8px);          // text passing underneath stays legible
+  border: none !important;
+  border-bottom: 1px solid #e8e8e8 !important;
+  box-shadow: none !important;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .navbar-container {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem 1.5rem;
+  flex-wrap: wrap;
+  max-width: $measure;
+  margin: 0 auto;
+  padding: 0.9rem 1.25rem;
+}
+
+// The name, top left. Bold given name, light surname -- the emphasis comes
+// from `**Asya**` in the navbar title in _quarto.yml.
+.navbar .navbar-brand { padding: 0; margin: 0; }
+
+.navbar .navbar-title {
+  font-family: $font-family-display;
+  font-size: 1.15rem;
+  font-weight: 300;
+  color: $headings-color !important;
+  letter-spacing: -0.01em;
+}
+
+.navbar .navbar-title strong { font-weight: 700; }
+
+.navbar .navbar-brand:hover .navbar-title { color: $link-color !important; }
+
+// Undo Bootstrap's collapse machinery (see note 2 above) and pin the links
+// to the right edge.
+.navbar .navbar-collapse {
+  display: block !important;         // beats Bootstrap's .collapse{display:none}
+  flex: 0 1 auto;
+  margin-left: auto;
+}
+
+.navbar .navbar-toggler { display: none !important; }
+
+.navbar .navbar-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.3rem 1.4rem;
+  padding: 0;
+  margin: 0;
+  max-height: none;                  // .navbar-nav-scroll would cap and scroll
+  overflow: visible;
+}
+
+.navbar .nav-link {
+  font-family: $font-family-sans-serif;
+  padding: 0 !important;
+  color: #6a6a6a !important;
+  font-size: 0.92rem;
+  font-weight: 400;
+  text-transform: lowercase;         // "about", "research" -- as on the reference
+  letter-spacing: 0.01em;
+  transition: color 0.15s ease;
+}
+
+.navbar .nav-link:hover {
+  color: $link-color !important;
+  text-decoration: none;
+}
+
+// The page you are currently on.
+.navbar .nav-link.active {
+  color: $link-color !important;
+  font-weight: 500;
+}
+
+
+// ---------------------------------------------------------------------------
+// Headings and body copy
+// ---------------------------------------------------------------------------
+h1, h2, h4 {
+  font-family: $font-family-display;
+  color: $headings-color;
+  line-height: 1.25;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+// h3 stays in the sans face: it is set small, uppercase and letterspaced
+// (the "PEER-REVIEWED PUBLICATIONS" labels), where a slab serif reads badly.
+h3 {
+  color: $headings-color;
+  line-height: 1.25;
+  font-weight: 700;
+}
+
+h1 { font-size: 1.6rem;  margin: 2rem 0 1rem; }
+h2 { font-size: 1.25rem; margin: 2.75rem 0 0.5rem; }
+h3 { font-size: 1.02rem; margin: 2rem 0 0.75rem; text-transform: uppercase;
+     letter-spacing: 0.06em; color: #555; font-weight: 700; }
+
+p { margin: 0 0 1.1rem; }
+
+a           { color: $link-color; text-decoration: none; }
+a:visited   { color: $link-color; }
+a:hover     { color: $link-hover-color; text-decoration: underline; }
+
+hr { border: 0; border-top: 1px solid #e5e5e5; margin: 2.5rem 0; }
+
+// Quarto renders the page title from each file's YAML into this block.
+#title-block-header .title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $headings-color;
+  margin: 2rem 0 1.25rem;
+}
+
+
+// ===========================================================================
+// ABOUT PAGE
+// ---------------------------------------------------------------------------
+// This page carries the name as a big heading, so the copy of it in the top
+// bar is hidden here (and only here) -- the :has() selector matches only the
+// page that contains .about-hero. Quarto's own title block is hidden too,
+// since .about-name replaces it; the YAML `title` still feeds the browser tab.
+// ===========================================================================
+body:has(.about-hero) .navbar-brand-container,
+body:has(.about-hero) #title-block-header {
+  display: none;
+}
+
+// A little more air above the Updates heading than the site-wide h2 spacing,
+// so the list reads as a separate block from the bio rather than running on
+// from it. Higher specificity than the base `h2` rule, so it wins regardless
+// of source order.
+body:has(.about-hero) h2 { margin-top: 4.25rem; }
+
+.about-hero { margin: 2.5rem 0 2.5rem; }   // the 2.5rem below sets the gap
+                                          // before the photo/bio row
+
+.about-name {
+  font-family: $font-family-display;
+  font-size: 2.6rem;
+  font-weight: 300;            // surname light...
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: $headings-color;
+  margin: 0 0 0.35rem;
+}
+
+.about-name strong { font-weight: 700; }   // ...given name bold
+
+.about-role {
+  font-size: 1.02rem;
+  font-weight: 400;
+  color: $link-color;
+  margin: 0;
+}
+
+// Photo and bio sit side by side as two columns of a flex row rather than
+// the bio floating around the photo. With a float, the paragraphs that run
+// past the bottom of the photo reclaim the full width and jump back to the
+// left margin, so the text block has a stepped edge. As columns, every line
+// of the bio shares one left edge.
+.about-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.75rem;
+  margin: 0 0 1.5rem;
+}
+
+.about-photo {
+  flex: 0 0 auto;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.13);
+}
+
+.about-bio {
+  flex: 1 1 auto;
+  min-width: 0;            // lets the column shrink instead of overflowing
+}
+
+.about-bio p:last-child { margin-bottom: 0; }
+
+// On a wide screen the whole row hangs into the left margin, so the photo
+// sits outside the text column and the bio gains width. Only applied where
+// there is actually room for the overhang, so it can never cause sideways
+// scrolling.
+@media (min-width: 1040px) {
+  .about-row,
+  .about-hero { margin-left: -7rem; }     // name sits directly above the photo
+
+  // The bio runs a little past the right edge of the text column, so it gets a
+  // wider measure than the rest of the page. The updates list is extended by
+  // exactly the same amount, so the two blocks stay flush on the right.
+  .about-row { margin-right: -3.5rem; }
+}
+
+// Too narrow for two columns: photo centres above the bio.
+@media (max-width: 620px) {
+  .about-row,
+  .about-hero {
+    display: block;
+    margin-left: 0;
+  }
+  .about-photo {
+    display: block;
+    margin: 0.5rem auto 1.75rem;
+    width: 11rem;
+    height: 11rem;
+  }
+  .about-name { font-size: 2.1rem; }
+}
+
+
+// ===========================================================================
+// NEWS TICKER (index page)
+// ---------------------------------------------------------------------------
+// A dated list of updates. Newest first. To add an entry, copy one <li> in
+// index.qmd and change the date and text. Nothing else to update.
+// ===========================================================================
+// The list is a fixed-height scroll panel: roughly three entries are visible
+// and the rest scroll inside it, so a long back-catalogue of updates never
+// pushes the rest of the page down. `overflow-y: auto` means the scrollbar
+// only appears when there is actually something to scroll to. No JavaScript.
+.news {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0 0.75rem 0 0;
+  max-height: 19rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;   // scrolling past the end doesn't grab the page
+  scrollbar-gutter: stable;       // reserve the bar's width so nothing reflows
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+// A slim, quiet scrollbar rather than the chunky OS default.
+.news { scrollbar-width: thin; scrollbar-color: #cfcfcf transparent; }
+.news::-webkit-scrollbar { width: 8px; }
+.news::-webkit-scrollbar-track { background: transparent; }
+.news::-webkit-scrollbar-thumb {
+  background: #d6d6d6;
+  border-radius: 4px;
+}
+.news::-webkit-scrollbar-thumb:hover { background: #bdbdbd; }
+
+.news li {
+  display: flex;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 0.94rem;
+}
+
+// Matches the width of the bio above: the updates list runs the same 3.5rem
+// past the right edge of the text column, so the two blocks stay flush.
+// This has to come AFTER the `.news { margin: ... }` shorthand above --
+// same specificity, so whichever is written last wins.
+@media (min-width: 1040px) {
+  .news { margin-right: -3.5rem; }
+}
+
+// The date sits in a fixed-width gutter so all the text lines up.
+.news .date {
+  flex: 0 0 8.75rem;       // wide enough for "September 2026" on one line
+  color: #888;
+  font-variant-numeric: tabular-nums;
+}
+
+
+// ===========================================================================
+// RESEARCH PAGE: no page heading
+// ---------------------------------------------------------------------------
+// The nav already marks Research as the current page, so the "Research" title
+// is redundant. Hiding it via :has(.pubs) keeps the <title> tag and metadata
+// intact -- the browser tab and any link preview still read "Research".
+// ===========================================================================
+body:has(.pubs) #title-block-header {
+  display: none;
+}
+
+// Restore the breathing room the heading used to give between the nav
+// hairline and the topic filter.
+body:has(.pubs) #quarto-content {
+  padding-top: 2rem;
+}
+
+
+// ===========================================================================
+// RESEARCH PAGE: topic filter
+// ---------------------------------------------------------------------------
+// How this works, since it is the least obvious thing on the site:
+//
+//   1. A native <select> holds one <option> per topic, plus "All papers".
+//   2. Each paper <li> carries a class for EVERY topic it belongs to. A paper
+//      in two topics has two classes. Nothing is duplicated in the HTML.
+//   3. CSS reads the dropdown directly. `option:checked` matches whichever
+//      option is currently selected, and `:has()` lets the wrapping <div>
+//      react to it — so `.filter:has(option[value="housing"]:checked)` is
+//      true exactly while "Housing & land use" is showing in the dropdown.
+//   4. From there `~` reaches forward to .pubs: hide every paper, then
+//      unhide the ones carrying that topic's class. Because the rule lands
+//      on individual papers rather than on the sections, filtering works
+//      inside BOTH sections at once.
+//
+// No JavaScript. If a browser does not support :has(), the dropdown simply
+// does nothing and every paper stays visible — it never blanks the page.
+//
+// Add a topic by adding an <option> in research.qmd, adding the name to the
+// @each list below, and putting the class on the relevant papers.
+// ===========================================================================
+
+.filter {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 2rem;
+  font-size: 0.9rem;
+}
+
+.filter label { color: #666; }
+
+// Bootstrap styles <select> heavily; this strips it back to a plain control
+// that matches the rest of the page.
+.topic-select {
+  font-family: inherit;      // match the body face, not the browser default
+  font-size: 0.9rem;
+  color: $link-color;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+  padding: 0.15rem 0.2rem;
+  cursor: pointer;
+  max-width: 100%;
+}
+
+.topic-select:hover { border-bottom-color: $link-color; }
+
+.topic-select:focus-visible {
+  outline: 2px solid $link-color;
+  outline-offset: 2px;
+}
+
+// ---------------------------------------------------------------------------
+// Per-topic rules. Selecting a topic hides every paper, re-shows the ones
+// tagged with it, and drops any section left with nothing in it.
+// ---------------------------------------------------------------------------
+
+@each $topic in conjoint, education, federalism, housing, immigration,
+                measurement, geography, sheriffs, voting {
+  .filter:has(option[value="#{$topic}"]:checked) ~ .pubs {
+    .paper           { display: none; }
+    .paper.#{$topic} { display: list-item; }
+
+    // A section whose list contains no paper in this topic disappears
+    // entirely, heading and all, rather than leaving an empty heading.
+    .pub-section:not(:has(.paper.#{$topic})) { display: none; }
+  }
+}
+
+// "All papers" is the default and needs no rules at all: nothing is hidden,
+// so every paper shows under both headings.
+
+
+// ===========================================================================
+// RESEARCH PAGE: publication list
+// ===========================================================================
+.pub-section { margin-bottom: 2.5rem; }
+
+.pubs ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: pub;
+}
+
+// Each paper is numbered by CSS rather than by hand. Because hidden elements
+// do not increment a CSS counter, the numbering re-flows automatically when
+// you filter by theme — you always see 1, 2, 3 with no gaps.
+.paper {
+  counter-increment: pub;
+  position: relative;
+  padding-left: 2.1rem;
+  margin-bottom: 1.4rem;
+}
+
+.paper::before {
+  content: counter(pub) ".";
+  position: absolute;
+  left: 0;
+  width: 1.6rem;
+  text-align: right;
+  color: #888;
+  font-variant-numeric: tabular-nums;
+}
+
+.pub-title  { font-weight: 700; }
+
+// Titles of published papers link to the DOI. `inherit` keeps them looking
+// identical to unlinked titles; only hover reveals that they are clickable.
+// Quarto's base stylesheet sets `a { font-weight: 400 }`, which would strip
+// the bold off a linked title, so inherit that too.
+.pub-title a { color: inherit; font-weight: inherit; text-decoration: none; }
+.pub-title a:hover { color: $link-hover-color; }
+
+.paper .pub-meta {
+  display: block;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+// Award lines, e.g. best paper prizes.
+.pub-award {
+  display: block;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: #7a6a2f;
+  margin-top: 0.15rem;
+}
+
+// The PDF / Appendix / Replication row.
+.pub-links {
+  display: block;
+  font-size: 0.86rem;
+  margin-top: 0.2rem;
+}
+
+.pub-links a { margin-right: 0.7rem; }
+
+
+// ===========================================================================
+// ABSTRACTS AND FIGURES
+// ---------------------------------------------------------------------------
+// <details> is a native HTML element: the browser handles open/close with no
+// script. The figure lives inside the same <details> as the abstract text, so
+// one click reveals both.
+// ===========================================================================
+details.abstract,
+details.course-desc { margin-top: 0.45rem; }
+
+details.abstract > summary,
+details.course-desc > summary {
+  cursor: pointer;
+  font-size: 0.86rem;
+  color: $link-color;
+  list-style: none;          // suppress the default triangle
+  display: inline-block;
+}
+
+details.abstract > summary::-webkit-details-marker,
+details.course-desc > summary::-webkit-details-marker { display: none; }
+
+// Our own marker: a "+" that becomes a "-" when open.
+details.abstract > summary::before,
+details.course-desc > summary::before {
+  content: "+ ";
+  font-weight: 700;
+}
+
+details.abstract[open] > summary::before,
+details.course-desc[open] > summary::before { content: "– "; }
+
+details.abstract > summary:hover,
+details.course-desc > summary:hover { text-decoration: underline; }
+
+// Shared by the research-page abstracts and the teaching-page course
+// descriptions: same disclosure widget, same styling.
+.abstract-body,
+.course-desc-body {
+  font-size: 0.93rem;
+  color: #444;
+  border-left: 2px solid #e5e5e5;
+  padding: 0.5rem 0 0.1rem 1rem;
+  margin-top: 0.6rem;
+}
+
+.abstract-body p,
+.course-desc-body p { margin-bottom: 0.8rem; }
+
+// Key figure shown alongside the abstract.
+.abstract-body figure { margin: 0.8rem 0 0; }
+
+.abstract-body img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #eee;
+}
+
+.abstract-body figcaption {
+  font-size: 0.82rem;
+  color: #777;
+  margin-top: 0.4rem;
+}
+
+
+// ===========================================================================
+// CV PAGE
+// ---------------------------------------------------------------------------
+// The PDF is embedded with <object>, which hands it to the browser's built-in
+// viewer (scroll, zoom, print, save) with no JavaScript and no external
+// service. Height is viewport-relative so the viewer fills the screen without
+// pushing the page absurdly long on a laptop.
+// ===========================================================================
+// The viewer alone breaks out of the text column, wider than $measure, while
+// the nav and the page title stay exactly where they sit on every other page
+// (so nothing shifts as you move between pages). `margin-inline-start: 50%`
+// plus `translateX(-50%)` re-centres the wider box on the column's centre.
+// The width is capped against the viewport so it never causes sideways scroll.
+// The page title is redundant here: the nav already marks CV as the current
+// page, and the PDF carries its own name. Hiding it via :has() keeps the
+// <title> tag and metadata intact (so the browser tab and any link preview
+// still say "CV"); only the on-page heading goes.
+body:has(.cv-frame) #title-block-header {
+  display: none;
+}
+
+// With the heading gone, restore the breathing room it used to provide
+// between the nav hairline and the viewer.
+body:has(.cv-frame) #quarto-content {
+  padding-top: 2rem;
+}
+
+.cv-frame {
+  display: block;
+  width: min(60rem, calc(100vw - 3rem));
+  margin-inline-start: 50%;
+  transform: translateX(-50%);
+  height: 85vh;
+  min-height: 480px;
+  border: 1px solid #e5e5e5;
+  background: #fafafa;
+}
+
+// Shown only when the browser cannot render a PDF inline.
+.cv-fallback {
+  padding: 1.5rem;
+  font-size: 0.93rem;
+  color: #555;
+}
+
+@media (max-width: 600px) {
+  .cv-frame { height: 70vh; }
+}
+
+
+// ===========================================================================
+// TEACHING PAGE
+// ---------------------------------------------------------------------------
+// No page heading: the nav already marks Teaching as the current page. The
+// YAML `title` stays, so the browser tab and link previews still read
+// "Teaching"; only the on-page heading is hidden.
+// ===========================================================================
+body:has(.course) #title-block-header { display: none; }
+
+body:has(.course) #quarto-content { padding-top: 2rem; }
+
+.course { margin-bottom: 1.6rem; }
+.course-title { font-weight: 700; }
+
+// A linked course or workshop title must look exactly like an unlinked one:
+// inherit the colour and the bold, and drop the underline. (Quarto's base
+// stylesheet sets `a { font-weight: 400 }`, which would otherwise strip the
+// bold off.) Hover is the only cue that it is clickable -- same treatment as
+// the DOI-linked paper titles on the research page.
+.course-title a { color: inherit; font-weight: inherit; text-decoration: none; }
+.course-title a:hover { color: $link-hover-color; }
+.course-meta  { display: block; font-size: 0.9rem; color: #666; }
+
+.course-desc-body p:last-child { margin-bottom: 0; }
+
+
+// ===========================================================================
+// SMALL SCREENS
+// ===========================================================================
+@media (max-width: 600px) {
+  .navbar { padding-top: 1.5rem; }
+  .news li { flex-direction: column; gap: 0.1rem; }
+  .news .date { flex-basis: auto; }
+  .paper { padding-left: 1.7rem; }
+}
