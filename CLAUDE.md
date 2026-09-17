@@ -163,6 +163,12 @@ fixed it in seconds.
 - **Page headings are hidden** on every page via `:has()` — the nav already
   says where you are. The YAML `title` is kept so browser tabs and link
   previews still work.
+- **Contact icons** sit under the photo on the About page: email, Google
+  Scholar, GitHub. They are inline SVG, not an icon font — Font Awesome or
+  Academicons would mean a CDN request on every page load, the same privacy
+  problem as hotlinking Google Fonts. The Scholar one is a plain mortarboard
+  rather than the Google Scholar logo, which turns into an unreadable blob at
+  21px. The email is percent-encoded (see the trap above).
 - **Favicon** is a script "A" (Savoye LET) in crimson on white. To regenerate:
   render the letter in Chrome headless, measure its alpha bbox, scale to ~60%
   of the tile, compose on a rounded white square. Two letters were illegible
@@ -191,19 +197,25 @@ Possible later: move the registration to Cloudflare Registrar or Porkbun
 
 ---
 
+# Deliberate differences — do not "fix" these
+
+- **The MIT course title.** The CV says *Formal Approaches to American
+  Political Institutions*; the syllabus and the site say *Formal Approaches to
+  Political Institutions (17.S953)*. Intentional, for strategic reasons.
+- **No preprint links in the CV.** Asya does not want them there. The Research
+  page still links preprints (OSF, SSRN) and should keep doing so — that is
+  the website's job, not the CV's. Don't suggest adding them back.
+
 # Still outstanding
 
-- **The CV disagrees with the site** on the MIT course: the CV says *Formal
-  Approaches to American Political Institutions*, the syllabus and site say
-  *Formal Approaches to Political Institutions (17.S953)*.
-- **The CV dropped two preprint links** (OSF for the conjoint paper, SSRN for
-  Reform Drift) that the Research page still carries.
 - **The Policy Adjacent** is cited as *AJPS* 1–16 because it is still
   early-view. When it gets an issue, update both the site and the CV.
-- **No contact route.** The Contact page was deleted and no email address
-  appears anywhere on the site.
 - **The Math for Data Science syllabus** has "Fall Semester 2024" in its
   header though it is the 2025 version.
+- **Google Scholar profile** still lists MIT as the affiliation.
 - **`figures/`** is empty and still listed in `resources:`; the CSS for
   figures inside abstracts is unused but kept in case it is wanted later.
 - **DNS TTL** is at 30 minutes from the migration; could go back to a few hours.
+- **Domain renews 14 Dec 2026 at $20/yr** through Squarespace. Cloudflare
+  Registrar or Porkbun are roughly half that; moving it needs the transfer
+  lock off and an auth code.
