@@ -119,6 +119,13 @@ published at all and every link to it 404s. This applies to whole folders.
 serves the site. If it stops being republished, the custom domain is forgotten
 on the next deploy and the site goes down.
 
+**The email address is percent-encoded on purpose.** In `index.qmd` the
+mailto link is written as `mailto:%61%2E%6D...` so the page contains no
+readable address for a harvester. Browsers decode it before use, so it works
+as a normal email link. HTML entities do *not* work for this — pandoc decodes
+them back to plain text when it builds the page. If you edit that link, keep
+it percent-encoded.
+
 **Linked titles lose their styling.** Quarto's base CSS sets
 `a { font-weight: 400 }`, so a link inside a bold title renders unbolded and
 crimson. `.pub-title a` and `.course-title a` fix this with
