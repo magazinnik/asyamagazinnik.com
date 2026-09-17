@@ -329,6 +329,36 @@ body:has(.about-hero) h2 { margin-top: 4.25rem; }
   margin: 0 0 1.5rem;
 }
 
+// The photo and the icon row form the left column of .about-row.
+.about-side {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// Email / Scholar / GitHub, in a row beneath the photo.
+.about-links {
+  display: flex;
+  gap: 1.4rem;
+  margin: 1.1rem 0 0;
+  line-height: 1;
+}
+
+.about-links a {
+  color: #9a9a9a;              // quiet at rest so they don't compete with
+  display: block;              // the name and the bio
+  transition: color 0.15s ease;
+}
+
+.about-links a:hover { color: $link-color; }
+
+.about-links svg {
+  width: 21px;
+  height: 21px;
+  display: block;
+}
+
 .about-photo {
   flex: 0 0 auto;
   width: 14rem;
@@ -368,10 +398,11 @@ body:has(.about-hero) h2 { margin-top: 4.25rem; }
   }
   .about-photo {
     display: block;
-    margin: 0.5rem auto 1.75rem;
+    margin: 0.5rem auto 0;
     width: 11rem;
     height: 11rem;
   }
+  .about-side { margin-bottom: 1.75rem; }
   .about-name { font-size: 2.1rem; }
 }
 
