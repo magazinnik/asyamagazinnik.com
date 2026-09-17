@@ -150,7 +150,13 @@ ul.task-list li input[type="checkbox"] {
          privacy problem as hotlinking Google Fonts. These cost nothing and
          inherit their colour from the CSS via currentColor. -->
     <p class="about-links">
-      <a href="mailto:a.magazinnik@hertie-school.org" title="Email" aria-label="Email">
+      <!-- The address is percent-encoded. A browser decodes a mailto URI
+           before using it, so this behaves as an ordinary email link, but the
+           raw HTML contains no "@" and no readable address for a regex-based
+           harvester. Note: HTML entities do NOT work here - pandoc decodes
+           them back to plain text when it builds the page. Keep it
+           percent-encoded if you edit this. -->
+      <a href="mailto:%61%2E%6D%61%67%61%7A%69%6E%6E%69%6B%40%68%65%72%74%69%65%2D%73%63%68%6F%6F%6C%2E%6F%72%67" title="Email" aria-label="Email">
         <svg viewbox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <rect x="2.5" y="5" width="19" height="14" rx="2.5"></rect>
           <path d="m3 7.5 9 6 9-6"></path>
